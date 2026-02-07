@@ -130,8 +130,8 @@ export default function Hero() {
                     </div>
 
                     {/* Right Side - Image Gallery Placeholder */}
-                    <div className="lg:col-span-2 h-full">
-                        <div className="rounded-2xl overflow-hidden shadow-2xl bg-white border">
+                    <div className="lg:col-span-2 h-full flex items-start xl:items-end">
+                        <div className="rounded-2xl overflow-hidden shadow-2xl border">
                             <div className="relative">
                                 <div className="overflow-hidden" ref={emblaRef}>
                                     <div className="flex">
