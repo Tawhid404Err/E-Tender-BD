@@ -1,0 +1,135 @@
+import React, { useState } from 'react'
+import { Link, NavLink } from 'react-router-dom'
+import { HiMenu, HiX } from 'react-icons/hi'
+import { Button } from '@/components/ui/button'
+
+const Navbar = () => {
+    const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
+
+    const navItems = [
+        { label: 'এটি কিভাবে কাজ করে', to: '/how-it-works', hash: '#how-it-works' },
+        { label: 'সেবা সমূহ', to: '/services' },
+        { label: 'STL Calculation', to: '/stl-calculation', hash: '#stl-calculation' },
+        { label: 'About Us', to: '/about-us', hash: '#about' },
+        { label: 'Contact Us', to: '/contact-us', hash: '#contact' },
+        { label: 'Blog', to: '/blogs', hash: '#blog' },
+    ]
+
+    return (
+        <nav className="sticky top-0 z-50 w-full border-b bg-white shadow-sm">
+            <div className="container mx-auto px-4">
+                <div className="flex h-16 items-center justify-between">
+                    {/* Logo */}
+                    <div className="flex-shrink-0">
+                        <Link to="/" className="flex items-center">
+                            <span className="text-2xl font-bold text-[#4874c7]">
+                                ই-টেন্ডার বিডি
+                            </span>
+                        </Link>
+                    </div>
+
+                    {/* Desktop Navigation */}
+                    <div className="hidden xl:flex xl:items-center xl:gap-1">
+                        {navItems.map((item) => (
+                            <NavLink
+                                key={item.label}
+                                to={item.hash ? `${item.to}${item.hash}` : item.to}
+                            >
+                                {({ isActive }) => (
+                                    <div className={`relative px-3 py-2 text-sm font-medium rounded-md transition-all duration-300 overflow-hidden group ${isActive ? 'text-[#4874c7]' : 'text-gray-700 hover:text-[#4874c7]'
+                                        }`}>
+                                        <span className="relative z-10">{item.label}</span>
+                                        {/* Active state - fully filled background */}
+                                        {isActive && (
+                                            <span className="absolute inset-0 bg-blue-50 rounded-md" />
+                                        )}
+                                        {/* Hover effect - diagonal fill from bottom-left to top-right */}
+                                        {!isActive && (
+                                            <span className="absolute inset-0 bg-blue-50 transform scale-0 group-hover:scale-100 transition-transform duration-300 ease-out origin-bottom-left rounded-md" />
+                                        )}
+                                    </div>
+                                )}
+                            </NavLink>
+                        ))}
+                    </div>
+
+                    {/* CTA Buttons (Desktop) */}
+                    <div className="hidden xl:flex xl:items-center xl:gap-2">
+                        <Button
+                            variant="outline"
+                            className="text-sm border-[#4874c7] text-[#4874c7] hover:bg-blue-50 hover:scale-102 hover:shadow-md transition-all duration-200"
+                        >
+                            লগ ইন
+                        </Button>
+                        <Button
+                            className="text-sm text-white bg-[#4874c7] hover:bg-[#3a5da8] hover:scale-102 hover:shadow-lg transition-all duration-200"
+                        >
+                            রেজিস্ট্রেশন করুন
+                        </Button>
+                    </div>
+
+                    {/* Mobile Menu Button */}
+                    <div className="xl:hidden">
+                        <button
+                            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+                            className="inline-flex items-center justify-center p-2 rounded-md text-[#4874c7] hover:bg-blue-50 focus:outline-none transition-colors"
+                            aria-expanded={isMobileMenuOpen}
+                        >
+                            <span className="sr-only">Open main menu</span>
+                            {!isMobileMenuOpen ? (
+                                <HiMenu className="h-7 w-7" />
+                            ) : (
+                                <HiX className="h-7 w-7" />
+                            )}
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            {/* Mobile Menu - Modern Design */}
+            <div
+                className={`xl:hidden bg-white/95 backdrop-blur-md shadow-2xl overflow-hidden transition-all duration-500 ease-in-out ${isMobileMenuOpen ? 'max-h-[600px] opacity-100' : 'max-h-0 opacity-0'
+                    }`}
+            >
+                <div className="px-4 pt-4 pb-3 space-y-2">
+                    {navItems.map((item, index) => (
+                        <NavLink
+                            key={item.label}
+                            to={item.hash ? `${item.to}${item.hash}` : item.to}
+                            onClick={() => setIsMobileMenuOpen(false)}
+                            className={({ isActive }) =>
+                                `group block px-4 py-3 rounded-lg text-base font-medium transition-all duration-200 transform hover:translate-x-1 ${isActive
+                                    ? 'text-[#4874c7] bg-gradient-to-r from-blue-50 to-indigo-50'
+                                    : 'text-gray-700 hover:text-[#4874c7] hover:bg-gradient-to-r hover:from-blue-50 hover:to-indigo-50'
+                                }`
+                            }
+                            style={{ animationDelay: `${index * 50}ms` }}
+                        >
+                            <div className="flex items-center justify-between">
+                                <span>{item.label}</span>
+                                <span className="text-[#4874c7] opacity-0 group-hover:opacity-100 transition-opacity">→</span>
+                            </div>
+                        </NavLink>
+                    ))}
+                </div>
+                <div className="pt-4 pb-4 px-4 border-t border-gray-100">
+                    <div className="flex flex-col space-y-3">
+                        <Button
+                            variant="outline"
+                            className="w-full h-11 border-2 border-[#4874c7] text-[#4874c7] hover:bg-blue-50 font-medium hover:scale-102 hover:shadow-md transition-all duration-200 active:scale-95"
+                        >
+                            লগ ইন
+                        </Button>
+                        <Button
+                            className="w-full h-11 text-white bg-gradient-to-r from-[#4874c7] to-[#3a5da8] hover:from-[#3a5da8] hover:to-[#2d4987] font-medium shadow-lg hover:scale-102 hover:shadow-xl transition-all duration-200 active:scale-95"
+                        >
+                            রেজিস্ট্রেশন করুন
+                        </Button>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    )
+}
+
+export default Navbar
