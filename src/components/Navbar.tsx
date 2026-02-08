@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import { useState } from 'react'
 import { Link, NavLink } from 'react-router-dom'
 import { HiMenu, HiX } from 'react-icons/hi'
 import { Button } from '@/components/ui/button'
