@@ -81,7 +81,7 @@ export default function MobileApps() {
 
                 {/* Phone frames (mobile) */}
                 <div className="mt-10 lg:hidden">
-                    <div className="relative mx-auto h-[380px]  bg-red-400 max-w-sm">
+                    <div className="relative mx-auto h-[380px] max-w-sm">
                         <img
                             src={iphoneFrame}
                             alt="Mobile app preview"
