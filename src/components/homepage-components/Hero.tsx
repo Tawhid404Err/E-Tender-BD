@@ -2,11 +2,7 @@
 
 import { useCallback, useEffect, useState } from "react"
 import useEmblaCarousel from "embla-carousel-react"
-import { Button } from "../ui/button"
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "../ui/card"
-import { Checkbox } from "../ui/checkbox"
-import { Input } from "../ui/input"
-import { Label } from "../ui/label"
+import LoginBox from "./LoginBox"
 
 const slides = [
     {
@@ -52,85 +48,19 @@ export default function Hero() {
                     {/* Left Side - Heading + Login Form */}
                     <div className="lg:col-span-1 space-y-6 mx-auto lg:flex-none lg:items-start">
                         <div>
-                            <h1 className="text-4xl lg:text-5xl font-bold text-gray-900 leading-tight">
+                            <h2 className=" text-gray-900">
                                 <span className="text-[#4874c7]">ইটেন্ডার বিডি</span>'তে স্বাগতম
-                            </h1>
+                            </h2>
                             <p className="mt-3 text-base text-gray-600">
                                 আপনার টেন্ডার ব্যবস্থাপনা এখন আরও সহজ, দ্রুত এবং কার্যকর
                             </p>
                         </div>
 
-                        <Card className="shadow-2xl w-full  min-[515px]:w-[480px] lg:w-full border-0 bg-white/90 backdrop-blur-sm">
-                            <CardHeader className="space-y-2">
-                                <CardTitle className="text-xl font-bold text-[#4874c7]">
-                                    লগইন করুন
-                                </CardTitle>
-                                <CardDescription className="text-sm">
-                                    আপনার অ্যাকাউন্টে প্রবেশ করুন এবং টেন্ডার ব্যবস্থাপনা শুরু করুন
-                                </CardDescription>
-                            </CardHeader>
-                            <CardContent>
-                                <form className="space-y-4">
-                                    <div className="space-y-2">
-                                        <Label htmlFor="email" className="text-sm font-medium">
-                                            ইমেইল
-                                        </Label>
-                                        <Input
-                                            id="email"
-                                            type="email"
-                                            placeholder="example@yourmail.com"
-                                            className="h-11"
-                                        />
-                                    </div>
-
-                                    <div className="space-y-2">
-                                        <Label htmlFor="password" className="text-sm font-medium">
-                                            পাসওয়ার্ড
-                                        </Label>
-                                        <Input
-                                            id="password"
-                                            type="password"
-                                            placeholder="••••••••"
-                                            className="h-11"
-                                        />
-                                    </div>
-
-                                    <div className="flex items-center justify-between text-sm">
-                                        <div className="flex items-center space-x-2">
-                                            <Checkbox id="remember" />
-                                            <label htmlFor="remember" className="cursor-pointer">
-                                                Remember me
-                                            </label>
-                                        </div>
-                                        <a href="#" className="font-medium text-[#4874c7] hover:underline">
-                                            Forget Password
-                                        </a>
-                                    </div>
-
-                                    <div className="flex w-full justify-center">
-                                        <Button
-                                            type="submit"
-                                            className="h-11 w-[50%] text-white bg-[#4874c7] hover:bg-[#3a5da8] hover:scale-102 transition-all duration-200"
-                                        >
-                                            Login
-                                        </Button>
-                                    </div>
-
-                                    <div className="text-center pt-2">
-                                        <p className="text-sm text-gray-600">
-                                            অ্যাকাউন্ট নেই?{" "}
-                                            <a href="#" className="font-semibold underline text-[#4874c7] hover:underline">
-                                                রেজিস্ট্রেশন করুন
-                                            </a>
-                                        </p>
-                                    </div>
-                                </form>
-                            </CardContent>
-                        </Card>
+                        <LoginBox />
                     </div>
 
                     {/* Right Side - Image Gallery Placeholder */}
-                    <div className="lg:col-span-2 h-full flex items-start xl:items-end">
+                    <div className="lg:col-span-2 h-full flex items-start 2xl::items-end">
                         <div className="rounded-2xl overflow-hidden shadow-2xl border">
                             <div className="relative">
                                 <div className="overflow-hidden" ref={emblaRef}>

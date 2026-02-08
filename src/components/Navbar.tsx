@@ -56,10 +56,11 @@ const Navbar = () => {
                     {/* CTA Buttons (Desktop) */}
                     <div className="hidden xl:flex xl:items-center xl:gap-2">
                         <Button
+                            asChild
                             variant="outline"
                             className="text-sm border-[#4874c7] text-[#4874c7] hover:bg-blue-50 hover:scale-102 hover:shadow-md transition-all duration-200"
                         >
-                            লগ ইন
+                            <Link to="/login">লগ ইন</Link>
                         </Button>
                         <Button
                             className="text-sm text-white bg-[#4874c7] hover:bg-[#3a5da8] hover:scale-102 hover:shadow-lg transition-all duration-200"
@@ -115,10 +116,11 @@ const Navbar = () => {
                 <div className="pt-4 pb-4 px-4 border-t border-gray-100">
                     <div className="flex flex-col space-y-3">
                         <Button
+                            asChild
                             variant="outline"
                             className="w-full h-11 border-2 border-[#4874c7] text-[#4874c7] hover:bg-blue-50 font-medium hover:scale-102 hover:shadow-md transition-all duration-200 active:scale-95"
                         >
-                            লগ ইন
+                            <Link to="/login">লগ ইন</Link>
                         </Button>
                         <Button
                             className="w-full h-11 text-white bg-gradient-to-r from-[#4874c7] to-[#3a5da8] hover:from-[#3a5da8] hover:to-[#2d4987] font-medium shadow-lg hover:scale-102 hover:shadow-xl transition-all duration-200 active:scale-95"

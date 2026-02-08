@@ -11,9 +11,9 @@ export default function MobileApps() {
         <div className="w-full">
             <div className="mx-auto py-10 lg:py-16">
                 <div>
-                    <h1 className="text-4xl max-w-6xl mx-auto text-center lg:text-5xl mb-8 font-bold text-gray-900 leading-tight">
+                    <h2 className="max-w-4xl mx-auto text-center mb-8 text-gray-900">
                         {`আমাদের ইটেন্ডার বিডি আপ্পসে আপনার টেন্ডার ব্যবস্থাপনা হবে সহজ, দ্রুত এবং কার্যকর`}
-                    </h1>
+                    </h2>
                 </div>
                 <div className="flex justify-center mb-8">
                     <div className="bg-white p-2 rounded-md border border-[#4874C7]">
@@ -37,7 +37,7 @@ export default function MobileApps() {
                             <p className="text-[11px] uppercase tracking-wide text-white/80">
                                 Download on the
                             </p>
-                            <p className="text-base font-semibold">App Store</p>
+                            <p className="text-base text-white font-semibold">App Store</p>
                         </div>
                     </Link>
                     <Link
@@ -50,7 +50,7 @@ export default function MobileApps() {
                             <p className="text-[11px] uppercase tracking-wide text-white/80">
                                 Get it on
                             </p>
-                            <p className="text-base font-semibold">Google Play</p>
+                            <p className="text-base text-white font-semibold">Google Play</p>
                         </div>
                     </Link>
                 </div>
