@@ -28,7 +28,7 @@ export default function AboutHero() {
                     <p className="text-sm font-semibold uppercase tracking-wide text-[#4874c7]">
                         ই-টেন্ডার বিডি
                     </p>
-                    <h1 className="mt-2 text-gray-900">আমাদের সম্পর্কে</h1>
+                    <h2 className="mt-2 text-gray-900">আমাদের সম্পর্কে</h2>
                     <p className="mt-3">
                         ETenderBD হলো বাংলাদেশের ঠিকাদারদের জন্য একটি সম্পূর্ণ
                         অটোমেটেড ওয়েব ও মোবাইল অ্যাপ-ভিত্তিক প্ল্যাটফর্ম। আমরা সরকারি

@@ -28,9 +28,9 @@ export default function ServicesHero() {
                     <p className="text-sm font-semibold uppercase tracking-wide text-[#4874c7]">
                         সেবা সমূহ
                     </p>
-                    <h1 className="mt-2 text-gray-900">
+                    <h2 className="mt-2 text-gray-900">
                         আপনার টেন্ডার প্রক্রিয়ার জন্য সম্পূর্ণ অটোমেটেড সল্যুশন
-                    </h1>
+                    </h2>
                     <p className="mt-3">
                         ই-টেন্ডার বিডি ঠিকাদারদের জন্য দ্রুত, নির্ভুল এবং কম খরচে
                         টেন্ডার ম্যানেজমেন্ট সেবা প্রদান করে।

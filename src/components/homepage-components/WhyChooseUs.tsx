@@ -31,13 +31,11 @@ export default function WhyChooseUs() {
     ]
 
     type Status = "yes" | "no" | "partial"
-    type ColumnKey = "us" | "bdtender" | "tenderbazar" | "tendernotice"
+    type ColumnKey = "us" | "others"
 
     const comparisonColumns: { key: ColumnKey; label: string; highlight?: boolean }[] = [
-        { key: "us", label: "ই-টেন্ডার বিডি", highlight: true },
-        { key: "bdtender", label: "BDTender" },
-        { key: "tenderbazar", label: "TenderBazar" },
-        { key: "tendernotice", label: "TenderNoticeBD" },
+        { key: "us", label: "ইটেন্ডার বিডি", highlight: true },
+        { key: "others", label: "অন্যান্য প্রতিযোগী" },
     ]
 
     type CellValue = { status: Status; text: string }
@@ -48,81 +46,63 @@ export default function WhyChooseUs() {
             feature: "সম্পূর্ণ টেন্ডার ডেটা (নোটিস + ডেটা শীট + অ্যাটাচমেন্ট)",
             values: {
                 us: { status: "yes", text: "পূর্ণ" },
-                bdtender: { status: "partial", text: "শুধু নোটিস" },
-                tenderbazar: { status: "partial", text: "সীমিত ডেটা" },
-                tendernotice: { status: "partial", text: "নোটিস" },
+                others: { status: "partial", text: "শুধু নোটিস বা সীমিত" },
             },
         },
         {
             feature: "অটোমেশন (ফর্ম ফিল-আপ, BOQ, ক্যাপাসিটি)",
             values: {
                 us: { status: "yes", text: "আছে" },
-                bdtender: { status: "no", text: "নেই" },
-                tenderbazar: { status: "partial", text: "ম্যানুয়াল" },
-                tendernotice: { status: "no", text: "নেই" },
+                others: { status: "partial", text: "নেই বা ম্যানুয়াল" },
             },
         },
         {
             feature: "অটো ডকুমেন্ট জেনারেশন",
             values: {
                 us: { status: "yes", text: "আছে" },
-                bdtender: { status: "no", text: "নেই" },
-                tenderbazar: { status: "no", text: "নেই" },
-                tendernotice: { status: "no", text: "নেই" },
+                others: { status: "no", text: "নেই" },
             },
         },
         {
             feature: "এন্ড-টু-এন্ড ওয়ার্কফ্লো",
             values: {
                 us: { status: "yes", text: "আছে" },
-                bdtender: { status: "no", text: "নেই" },
-                tenderbazar: { status: "partial", text: "আংশিক" },
-                tendernotice: { status: "no", text: "নেই" },
+                others: { status: "partial", text: "নেই বা আংশিক" },
             },
         },
         {
             feature: "রিয়েলটাইম নোটিফিকেশন",
             values: {
                 us: { status: "yes", text: "SMS + WhatsApp + Email" },
-                bdtender: { status: "partial", text: "SMS/Email" },
-                tenderbazar: { status: "partial", text: "SMS/Email" },
-                tendernotice: { status: "partial", text: "SMS/Email" },
+                others: { status: "partial", text: "SMS/Email" },
             },
         },
         {
             feature: "লোকাল থেকে ন্যাশনাল কভারেজ",
             values: {
                 us: { status: "yes", text: "লোকাল + ন্যাশনাল" },
-                bdtender: { status: "partial", text: "ঢাকা-কেন্দ্রিক" },
-                tenderbazar: { status: "partial", text: "সীমিত" },
-                tendernotice: { status: "partial", text: "সীমিত" },
+                others: { status: "partial", text: "সীমিত" },
             },
         },
         {
             feature: "ডিজিটাল ট্র্যাকিং/ড্যাশবোর্ড",
             values: {
                 us: { status: "yes", text: "উন্নত" },
-                bdtender: { status: "no", text: "নেই" },
-                tenderbazar: { status: "partial", text: "বেসিক" },
-                tendernotice: { status: "no", text: "নেই" },
+                others: { status: "partial", text: "নেই বা বেসিক" },
             },
         },
         {
             feature: "AI বাংলা FAQ বট",
             values: {
                 us: { status: "yes", text: "আছে" },
-                bdtender: { status: "no", text: "নেই" },
-                tenderbazar: { status: "no", text: "নেই" },
-                tendernotice: { status: "no", text: "নেই" },
+                others: { status: "no", text: "নেই" },
             },
         },
         {
             feature: "মাসিক ফি",
             values: {
                 us: { status: "yes", text: "৩০০–৫০০ টাকা" },
-                bdtender: { status: "partial", text: "উচ্চ ফি" },
-                tenderbazar: { status: "partial", text: "উচ্চ ফি" },
-                tendernotice: { status: "partial", text: "উচ্চ ফি" },
+                others: { status: "partial", text: "উচ্চ ফি" },
             },
         },
     ]
@@ -146,7 +126,7 @@ export default function WhyChooseUs() {
                     <p className="text-sm font-semibold uppercase tracking-wide text-[#4874c7]">
                         কেন ই-টেন্ডার বিডি?
                     </p>
-                    <h2 className="mt-2 text-3xl lg:text-4xl font-bold text-gray-900">
+                    <h2 className="mt-2 text-gray-900">
                         কম খরচে বেশি সুবিধা — আপনার টেন্ডার সফলতার স্মার্ট পার্টনার
                     </h2>
                     <p className="mt-3 text-base text-gray-600">

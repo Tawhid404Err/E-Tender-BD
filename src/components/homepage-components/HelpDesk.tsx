@@ -42,9 +42,9 @@ export default function HelpDesk() {
         <div className="w-full">
             <div className="mx-auto py-10 lg:py-16">
                 <div>
-                    <h1 className="text-4xl max-w-4xl mx-auto text-center lg:text-5xl mb-8 font-bold text-gray-900 leading-tight">
+                    <h2 className="max-w-4xl mx-auto text-center mb-8 text-gray-900">
                         {`কোথাও আঁটকে গেছেন? আমাদের গ্রাহক সেবা থেকে সাহায্য নিন!`}
-                    </h1>
+                    </h2>
                 </div>
                 <div className="max-w-3xl mx-auto mb-10">
                     <form className="group flex flex-col sm:flex-row items-stretch gap-3 sm:gap-0">

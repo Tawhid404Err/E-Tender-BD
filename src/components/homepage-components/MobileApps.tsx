@@ -11,7 +11,7 @@ export default function MobileApps() {
         <div className="w-full">
             <div className="mx-auto py-10 lg:py-16">
                 <div>
-                    <h2 className="max-w-4xl mx-auto text-center mb-8 text-gray-900">
+                    <h2 className="max-w-3xl mx-auto text-center mb-8 text-gray-900">
                         {`আমাদের ইটেন্ডার বিডি আপ্পসে আপনার টেন্ডার ব্যবস্থাপনা হবে সহজ, দ্রুত এবং কার্যকর`}
                     </h2>
                 </div>
