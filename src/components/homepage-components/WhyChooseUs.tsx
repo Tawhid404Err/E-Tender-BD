@@ -204,13 +204,13 @@ export default function WhyChooseUs() {
                         <table className="w-full text-sm">
                             <thead className="bg-blue-50/70 text-slate-700">
                                 <tr>
-                                    <th className="px-4 py-4 text-left font-semibold">
+                                    <th className="w-[25%] px-4 py-4 text-left font-semibold">
                                         বৈশিষ্ট্য
                                     </th>
-                                    {comparisonColumns.map((col) => (
+                                    {comparisonColumns.map((col, index) => (
                                         <th
                                             key={col.key}
-                                            className={`px-4 py-4 text-left font-semibold ${col.highlight
+                                            className={`${index === 0 ? "w-[50%]" : "w-[25%]"} px-4 py-4 text-left font-semibold ${col.highlight
                                                 ? "text-[#4874c7] bg-emerald-50/70"
                                                 : "text-slate-700"
                                                 }`}
@@ -223,20 +223,19 @@ export default function WhyChooseUs() {
                             <tbody className="divide-y divide-slate-100">
                                 {comparisonRows.map((row) => (
                                     <tr key={row.feature} className="align-top">
-                                        <td className="px-4 py-4 text-gray-700">
+                                        <td className="w-[25%] px-4 py-4 text-gray-700">
                                             {row.feature}
                                         </td>
-                                        {comparisonColumns.map((col) => {
+                                        {comparisonColumns.map((col, index) => {
                                             const value = row.values[col.key]
                                             const Icon = statusIcons[value.status]
                                             return (
                                                 <td
                                                     key={col.key}
-                                                    className={`px-4 py-4 ${col.highlight ? "bg-emerald-50/70" : ""}`}
+                                                    className={`${index === 0 ? "w-[50%]" : "w-[25%]"} px-4 py-4 ${col.highlight ? "bg-emerald-50/70" : ""}`}
                                                 >
                                                     <div className="flex items-start gap-2">
                                                         <span
-                                                        
                                                             className={`mt-0.5 inline-flex p-1 items-center justify-center rounded-full ${statusStyles[value.status]}`}
                                                         >
                                                             <Icon

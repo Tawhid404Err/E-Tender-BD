@@ -25,13 +25,13 @@ export default function ServicesHero() {
         <section className="w-full">
             <div className="mx-auto py-10 lg:py-16">
                 <div className="max-w-4xl mx-auto text-center">
-                    <p className="text-sm font-semibold uppercase tracking-wide text-[#4874c7]">
+                    <p className="text-sm font-semibold uppercase tracking-wide text-[#4874c7] animate-fade-in">
                         সেবা সমূহ
                     </p>
-                    <h2 className="mt-2 text-gray-900">
+                    <h2 className="mt-2 text-gray-900 animate-slide-up">
                         আপনার টেন্ডার প্রক্রিয়ার জন্য সম্পূর্ণ অটোমেটেড সল্যুশন
                     </h2>
-                    <p className="mt-3">
+                    <p className="mt-3 animate-slide-up" style={{ animationDelay: "100ms" }}>
                         ই-টেন্ডার বিডি ঠিকাদারদের জন্য দ্রুত, নির্ভুল এবং কম খরচে
                         টেন্ডার ম্যানেজমেন্ট সেবা প্রদান করে।
                     </p>

@@ -29,13 +29,13 @@ export default function ContactUs() {
     <div className="w-full">
       <section className="mx-auto px-4 sm:px-6 lg:px-8 py-10 lg:py-16">
         <div className="max-w-4xl mx-auto text-center">
-          <p className="text-sm font-semibold uppercase tracking-wide text-[#4874c7]">
+          <p className="text-sm font-semibold uppercase tracking-wide text-[#4874c7] animate-fade-in">
             যোগাযোগ করুন
           </p>
-          <h2 className="mt-2 text-gray-900">
+          <h2 className="mt-2 text-gray-900 animate-slide-up">
             আপনার টেন্ডার প্রশ্নের জন্য আমরা আছি
           </h2>
-          <p className="mt-3 text-base text-gray-600">
+          <p className="mt-3 text-base text-gray-600 animate-slide-up" style={{ animationDelay: "100ms" }}>
             আমাদের টিম আপনার প্রয়োজন অনুযায়ী দ্রুত সহায়তা, ডেমো এবং প্রাইসিং গাইড দিতে প্রস্তুত।
           </p>
         </div>

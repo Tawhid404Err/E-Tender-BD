@@ -8,10 +8,10 @@ export default function Statistics() {
     }).format(new Date())
 
     const stats = [
-        { value: "226", label: "নতুন টেন্ডার" },
-        { value: "144", label: "টোটাল লাইভ টেন্ডার" },
-        { value: "188", label: "করিজেন্ডাম" },
-        { value: "3982", label: "অফলাইন টেন্ডার" },
+        { value: "226", label: "LTM Tender" },
+        { value: "144", label: "OTM Tender" },
+        { value: "188", label: "OSTETM Tender" },
+        { value: "3982", label: "Other Tender" },
     ]
 
     return (

@@ -25,16 +25,16 @@ export default function AboutHero() {
         <section className="w-full">
             <div className="mx-auto py-10 lg:py-16">
                 <div className="max-w-4xl mx-auto text-center">
-                    <p className="text-sm font-semibold uppercase tracking-wide text-[#4874c7]">
+                    <p className="text-sm font-semibold uppercase tracking-wide text-[#4874c7] animate-fade-in">
                         ই-টেন্ডার বিডি
                     </p>
-                    <h2 className="mt-2 text-gray-900">আমাদের সম্পর্কে</h2>
-                    <p className="mt-3">
+                    <h2 className="mt-2 text-gray-900 animate-slide-up">আমাদের সম্পর্কে</h2>
+                    <p className="mt-3 animate-slide-up" style={{ animationDelay: "100ms" }}>
                         ETenderBD হলো বাংলাদেশের ঠিকাদারদের জন্য একটি সম্পূর্ণ
                         অটোমেটেড ওয়েব ও মোবাইল অ্যাপ-ভিত্তিক প্ল্যাটফর্ম। আমরা সরকারি
                         ই-টেন্ডার (e-GP) প্রক্রিয়াকে সহজ, দ্রুত এবং নির্ভুল করে দিই।
                     </p>
-                    <p className="mt-2">
+                    <p className="mt-2 animate-slide-up" style={{ animationDelay: "200ms" }}>
                         রেজিস্ট্রেশন থেকে সাবমিশন পর্যন্ত সবকিছু এক জায়গায় — যেন
                         ঠিকাদাররা তথ্য নয়, পুরো প্রক্রিয়া অটোমেটেডভাবে সম্পন্ন করতে পারেন।
                     </p>
