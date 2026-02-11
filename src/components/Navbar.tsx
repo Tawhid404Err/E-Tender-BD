@@ -7,12 +7,12 @@ const Navbar = () => {
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
 
     const navItems = [
-        { label: 'এটি কিভাবে কাজ করে', to: '/how-it-works', hash: '#how-it-works' },
+        { label: 'এটি কিভাবে কাজ করে', to: '/how-it-works' },
         { label: 'সেবা সমূহ', to: '/services' },
-        { label: 'STL Calculation', to: '/stl-calculation', hash: '#stl-calculation' },
-        { label: 'About Us', to: '/about-us', hash: '#about' },
-        { label: 'Contact Us', to: '/contact-us', hash: '#contact' },
-        { label: 'Blog', to: '/blogs', hash: '#blog' },
+        { label: 'STL Calculation', to: '/stl-calculation' },
+        { label: 'About Us', to: '/about-us' },
+        { label: 'Contact Us', to: '/contact-us' },
+        { label: 'Blog', to: '/blogs' },
     ]
 
     return (
@@ -33,7 +33,7 @@ const Navbar = () => {
                         {navItems.map((item) => (
                             <NavLink
                                 key={item.label}
-                                to={item.hash ? `${item.to}${item.hash}` : item.to}
+                                to={item.to}
                             >
                                 {({ isActive }) => (
                                     <div className={`relative px-3 py-2 text-sm font-medium rounded-md transition-all duration-300 overflow-hidden group ${isActive ? 'text-[#4874c7]' : 'text-gray-700 hover:text-[#4874c7]'
@@ -97,7 +97,7 @@ const Navbar = () => {
                     {navItems.map((item, index) => (
                         <NavLink
                             key={item.label}
-                            to={item.hash ? `${item.to}${item.hash}` : item.to}
+                            to={item.to}
                             onClick={() => setIsMobileMenuOpen(false)}
                             className={({ isActive }) =>
                                 `group block px-4 py-3 rounded-lg text-base font-medium transition-all duration-200 transform hover:translate-x-1 ${isActive
