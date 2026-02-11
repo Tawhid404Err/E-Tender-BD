@@ -63,9 +63,10 @@ const Navbar = () => {
                             <Link to="/login">লগ ইন</Link>
                         </Button>
                         <Button
+                            asChild
                             className="text-sm text-white bg-[#4874c7] hover:bg-[#3a5da8] hover:scale-102 hover:shadow-lg transition-all duration-200"
                         >
-                            রেজিস্ট্রেশন করুন
+                            <Link to="/registration">রেজিস্ট্রেশন করুন</Link>
                         </Button>
                     </div>
 
@@ -123,9 +124,10 @@ const Navbar = () => {
                             <Link to="/login">লগ ইন</Link>
                         </Button>
                         <Button
+                            asChild
                             className="w-full h-11 text-white bg-gradient-to-r from-[#4874c7] to-[#3a5da8] hover:from-[#3a5da8] hover:to-[#2d4987] font-medium shadow-lg hover:scale-102 hover:shadow-xl transition-all duration-200 active:scale-95"
                         >
-                            রেজিস্ট্রেশন করুন
+                            <Link to="/registration">রেজিস্ট্রেশন করুন</Link>
                         </Button>
                     </div>
                 </div>

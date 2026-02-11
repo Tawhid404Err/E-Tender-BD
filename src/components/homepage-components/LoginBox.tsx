@@ -86,9 +86,9 @@ export default function LoginBox() {
                     <div className="text-center pt-2">
                         <p className="text-sm text-gray-600">
                             অ্যাকাউন্ট নেই?{" "}
-                            <a href="#" className="font-semibold underline text-[#4874c7] hover:underline">
+                            <Link to="/registration" className="font-semibold underline text-[#4874c7] hover:underline">
                                 রেজিস্ট্রেশন করুন
-                            </a>
+                            </Link>
                         </p>
                     </div>
                 </form>
