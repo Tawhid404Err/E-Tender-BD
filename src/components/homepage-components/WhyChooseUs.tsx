@@ -5,28 +5,28 @@ import { Check, Minus, X } from "lucide-react"
 export default function WhyChooseUs() {
     const highlights = [
         {
-            title: "সম্পূর্ণ টেন্ডার ডেটা",
-            description: "নোটিস + ডেটা শীট + অ্যাটাচমেন্ট একসাথে",
+            title: "নতুন টেন্ডার নোটিশ",
+            description: "eGP হতে প্রকাশিত টেন্ডার নোটিস + টেন্ডার ডেটা শীট হতে সংগ্রহিত তথ্য + প্রাক্কলিত মূল্য একসাথে",
         },
         {
-            title: "অটোমেশন",
-            description: "ফর্ম ফিল-আপ, BOQ রেট অ্যানালাইসিস, ক্যাপাসিটি হিসাব",
+            title: "LTM, OTM টেন্ডার eGP ‍তে অটো সাবমিশন",
+            description: "টেন্ডার I Agree করা হতে শুরু করে ফর্ম ফিল-আপ, টেডার ডকুমেন্ট ম্যাপিং, BOQ রেট সিন করা সহ Encript পর্যন্ত eGP তে অটো সাবমিশন (মোবাইল এপস এবং পিসি সফটওয়্যার) সার্ভিস",
         },
         {
             title: "অটো ডকুমেন্ট জেনারেশন",
-            description: "অথরাইজ লেটার, ব্যাংক ক্রেডিট লেটার",
+            description: "টেন্ডার অনুযায়ী Autorized Latter, Code of condac, JV Aggrement এবং সকল ধরনের ট্রেমপ্লেট অনুসারে টেন্ডার অনুযায়ী প্রস্তাত",
         },
         {
             title: "রিয়েলটাইম নোটিফিকেশন",
-            description: "SMS, WhatsApp, Email",
+            description: "WhatsApp, Email এর মাধ্যেমে আপনার পছেন্দের টেন্ডার তালিকা প্রেরণ",
         },
         {
-            title: "কন্ট্রাক্টর ড্যাশবোর্ড",
-            description: "হিস্ট্রি, রিপোর্ট, উইনিং ইনসাইটস",
+            title: "টেন্ডার ম্যানেজমেন্ট",
+            description: "আসন্ন টেন্ডারগুলো TO DO লিষ্ট করা, টেন্ডার প্রিপারেশন এর কাজ ম্যনেজমেন্ট, টেন্ডার সিকিউরিটির তথ্য ট্রেকিং, আগামী সম্পাহের টেন্ডার গুলোর তালিকা সুস্জ্জিত রিপোর্ট, সাবমিট করার টেন্ডার লটারির ফলাফল দেখা।",
         },
         {
-            title: "AI বাংলা FAQ বট",
-            description: "ভয়েস সাপোর্টসহ দ্রুত সহায়তা",
+            title: "টেন্ডার SLT Calculation",
+            description: "টেন্ডার ড্রপিং করার পূর্বে SLT ক্যলকুলেশন করে নিজেকে যথা স্থানে রেইট কোট করার ব্যবস্থা",
         },
     ]
 
@@ -43,9 +43,9 @@ export default function WhyChooseUs() {
 
     const comparisonRows: ComparisonRow[] = [
         {
-            feature: "সম্পূর্ণ টেন্ডার ডেটা (নোটিস + ডেটা শীট + অ্যাটাচমেন্ট)",
+            feature: "নতুন টেন্ডার নোটিশ",
             values: {
-                us: { status: "yes", text: "পূর্ণ" },
+                us: { status: "yes", text: "প্রতি কাজের Location Information, Publication, Last Selling, Opening Date, All Types Financial Criteria (Estimated Cost, Tender Security, Turnover Amount, Liquid Assets, Tender Capacity" },
                 others: { status: "partial", text: "শুধু নোটিস বা সীমিত" },
             },
         },
@@ -127,11 +127,11 @@ export default function WhyChooseUs() {
                         কেন ই-টেন্ডার বিডি?
                     </p>
                     <h2 className="mt-2 text-gray-900">
-                        কম খরচে বেশি সুবিধা — আপনার টেন্ডার সফলতার স্মার্ট পার্টনার
+                        আপনার টেন্ডার পিপারেশনের স্মার্ট পার্টনার
                     </h2>
                     <p className="mt-3 text-base text-gray-600">
-                        প্রতিযোগীদের তুলনায় আমরা দিচ্ছি বেশি ফিচার, বেশি অটোমেশন এবং
-                        দ্রুত সাপোর্ট — সবকিছু এক প্ল্যাটফর্মে।
+                        আপনার টেন্ডার পিপারেশনের স্মার্ট পার্টনার
+নতুন টেন্ডার নোটিশ, টেন্ডার ডাটা শীট হতে তথ্য, প্রাক্কলিত মূল্য, টেন্ডারে অংশগ্রহনের যোগ্যতা যাচাই, SLT হিসাব করার ব্যবস্থা, অটো Turnover, Tender Capasity হিসাব করা ব্যবস্থা,RHD, PWD, LGED, WBD, EL BOQ রেইট খুজে বের করা, টেন্ডার অনুযায়ী Autorized Latter, Code of condac, JV Aggrement এবং সকল ধরনের ট্রেমপ্লেট অনুসারে টেন্ডার অনুযায়ী প্রস্তাত — সবকিছু এক প্ল্যাটফর্মে।
                     </p>
                 </div>
 
@@ -153,10 +153,10 @@ export default function WhyChooseUs() {
 
                 <div className="mt-10 flex flex-col items-center gap-3 text-center">
                     <h3 className="text-2xl font-bold text-gray-900">
-                        ফিচার তুলনা — ই-টেন্ডার বিডি বনাম অন্যান্য প্ল্যাটফর্ম
+                        কেন ই-টেন্ডার বিডি?
                     </h3>
                     <span className="rounded-full bg-blue-50 px-4 py-1 text-sm font-medium text-[#4874c7]">
-                        বেশি ফিচার, কম ফি, দ্রুত সেবা
+                        টেন্ডার সংক্রান্ত সকল কাজ এখন একই প্লাটফমে
                     </span>
                 </div>
 
@@ -236,9 +236,13 @@ export default function WhyChooseUs() {
                                                 >
                                                     <div className="flex items-start gap-2">
                                                         <span
-                                                            className={`mt-0.5 inline-flex h-5 w-5 items-center justify-center rounded-full ${statusStyles[value.status]}`}
+                                                        
+                                                            className={`mt-0.5 inline-flex p-1 items-center justify-center rounded-full ${statusStyles[value.status]}`}
                                                         >
-                                                            <Icon className="h-3.5 w-3.5" />
+                                                            <Icon
+                                                                className="h-3.5 w-3.5"
+                                                                
+                                                            />
                                                         </span>
                                                         <span
                                                             className={`text-sm ${col.highlight
