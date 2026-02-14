@@ -1,41 +1,55 @@
 "use client"
 
-import { FiCheckCircle } from "react-icons/fi"
+import { FiArrowDownRight } from "react-icons/fi"
+import { servicesDetails } from "./servicesData"
 
-export default function ServicesMainList() {
-    const services = [
-        "LTM টেন্ডার ড্রপিং",
-        "OTM, OSTEM, RFQ টেন্ডার ড্রপিং",
-        "১০% রেট মিলানো",
-        "টেন্ডার সিকিউরিটি হিসাব ও সাপ্তাহিক রিপোর্ট + SMS নোটিফিকেশন",
-        "নতুন কোম্পানির ই-জিপি রেজিস্ট্রেশন",
-        "কোম্পানির প্রোফাইল তৈরি",
-        "NOA Accepting ও Time Extension",
-        "ফাইল আপডেট ও সার্টিফিকেট e-experience এ যুক্ত করা",
-    ]
+type ServicesMainListProps = {
+    activeServiceId: string | null
+    onSelectService: (serviceId: string) => void
+}
 
+export default function ServicesMainList({ activeServiceId, onSelectService }: ServicesMainListProps) {
     return (
         <section className="w-full">
             <div className="mx-auto py-10 lg:py-16">
                 <div className="max-w-3xl">
-                    <h2 className="text-gray-900">যা পাবেন</h2>
+                    <h2 className="text-gray-900">আপনার জন্য সার্ভিস ক্যাটেগরি</h2>
                     <p className="mt-2">
-                        টেন্ডার সাবমিশন থেকে রিপোর্টিং পর্যন্ত প্রয়োজনীয় সব সার্ভিস।
+                        যে কার্ডে ক্লিক করবেন, নিচে সেই সার্ভিসের বিস্তারিত লিস্ট দেখাবে।
                     </p>
                 </div>
 
-                <div className="mt-6 grid gap-4 sm:grid-cols-2">
-                    {services.map((service) => (
-                        <div
-                            key={service}
-                            className="flex items-start gap-3 rounded-xl border border-slate-200/70 bg-white/90 p-4 shadow-md"
-                        >
-                            <span className="mt-0.5 inline-flex h-6 w-6 items-center justify-center rounded-full bg-emerald-50 text-emerald-600">
-                                <FiCheckCircle className="h-4 w-4" />
-                            </span>
-                            <p className="text-sm text-gray-700">{service}</p>
-                        </div>
-                    ))}
+                <div className="mt-6 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+                    {servicesDetails.map((service) => {
+                        const isActive = activeServiceId === service.id
+
+                        return (
+                            <button
+                                key={service.id}
+                                type="button"
+                                onClick={() => onSelectService(service.id)}
+                                className={`rounded-2xl border bg-white/90 p-4 text-left transition-all duration-300 ${
+                                    isActive
+                                        ? "border-[#4874c7] shadow-lg shadow-[#4874c7]/20"
+                                        : "border-slate-200/70 shadow-md hover:border-[#4874c7]/40 hover:shadow-lg"
+                                }`}
+                                aria-label={`${service.title} এর বিস্তারিত দেখুন`}
+                            >
+                                <div className="flex items-start justify-between gap-3">
+                                    <h4 className="text-gray-900">{service.title}</h4>
+                                    <span
+                                        className={`mt-0.5 inline-flex h-7 w-7 shrink-0 items-center justify-center rounded-full ${
+                                            isActive
+                                                ? "bg-[#4874c7]/15 text-[#4874c7]"
+                                                : "bg-slate-100 text-slate-500"
+                                        }`}
+                                    >
+                                        <FiArrowDownRight className="h-4 w-4" />
+                                    </span>
+                                </div>
+                            </button>
+                        )
+                    })}
                 </div>
             </div>
         </section>
